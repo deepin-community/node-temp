@@ -1,0 +1,22 @@
+Description: fix for mkdirp ≥ 1
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: no
+Last-Update: 2021-01-27
+
+--- a/lib/temp.js
++++ b/lib/temp.js
+@@ -263,10 +263,10 @@
+   callback = p[1];
+ 
+   let dirPath = generateName(affixes, 'd-');
+-  mkdirp(dirPath, 0o700, (err) => {
+-    if (!err) {
+-      deleteDirOnExit(dirPath);
+-    }
++  mkdirp(dirPath, {mode: 0o700}).then( () => {
++    deleteDirOnExit(dirPath);
++    callback(null, dirPath);
++  }).catch( (err) => {
+     callback(err, dirPath);
+   });
+   return promise;

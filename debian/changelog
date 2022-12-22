@@ -1,0 +1,69 @@
+node-temp (0.9.4-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Repository, Repository-
+    Browse.
+  * Update standards version to 4.4.1, no changes needed.
+  * Set upstream metadata fields: Bug-Submit.
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Paolo Greppi]
+  * New upstream version
+  * Install files under /usr/share/nodejs rather than /usr/lib/nodejs
+  * Bump debhelper from old 12 to 13.
+
+  [ Xavier Guimard ]
+  * Declare compliance with policy 4.5.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Use dh-sequence-nodejs auto test & install
+  * Drop dependency to nodejs
+  * Add fix for node-mkdirp ≥ 1
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 27 Jan 2021 15:14:28 +0100
+
+node-temp (0.8.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Refactored tests: asynchronous-aware now (Closes: #834915)
+    + Build-Depends mocha
+  * Patch: use crypto to get safer temp names
+  * Patch: fix upstream bug
+  * Standards-Version 4.3.0
+
+ -- Jérémy Lal <kapouer@melix.org>  Thu, 10 Jan 2019 00:27:19 +0100
+
+node-temp (0.8.3-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Paolo Greppi]
+  * Update Vcs fields for migration to https://salsa.debian.org/
+  * Bump standard version
+  * Bump debhelper compat
+
+  [ Tim Retout ]
+  * Enable tests during build
+
+  [ Jérémy Lal ]
+  * New upstream version 0.8.3 (Closes: #834915)
+  * (Build)-Depends node-os-tmpdir
+  * Standards-Version 3.9.8
+  * dh 9
+  * Secure Vcs Url
+  * Remove XS from Testsuite field
+  * Add build tests to testsuite
+
+ -- Paolo Greppi <paolo.greppi@libpf.com>  Wed, 25 Apr 2018 22:11:17 +0200
+
+node-temp (0.8.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #758878)
+
+ -- Tim Retout <diocles@debian.org>  Fri, 22 Aug 2014 09:25:22 +0100

@@ -1,0 +1,23 @@
+Description: improve hard-to-guess temp names
+Author: Jérémy Lal <kapouer@melix.org>
+Last-Update: 2020-01-26
+Forwarded: https://github.com/bruce/node-temp/pull/81
+--- a/lib/temp.js
++++ b/lib/temp.js
+@@ -1,6 +1,7 @@
+ let fs   = require('fs');
+ let path = require('path');
+ let cnst = require('constants');
++crypto = require('crypto');
+ 
+ let os         = require('os');
+ let rimraf     = require('rimraf');
+@@ -49,7 +50,7 @@
+               '-',
+               process.pid,
+               '-',
+-              (Math.random() * 0x100000000 + 1).toString(36),
++              crypto.randomBytes(6).toString('hex'),
+               affixes.suffix].join('');
+   return path.join(affixes.dir || dir, name);
+ };

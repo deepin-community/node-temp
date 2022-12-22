@@ -1,0 +1,5 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-temp-$1.tar.gz/ \
+ https://github.com/bruce/node-temp/tags .*/archive/v?([\d\.]+).tar.gz
