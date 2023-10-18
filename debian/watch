@@ -1,5 +1,10 @@
 version=4
 opts=\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-temp-$1.tar.gz/ \
- https://github.com/bruce/node-temp/tags .*/archive/v?([\d\.]+).tar.gz
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-temp-$1/ \
+ https://github.com/bruce/node-temp/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+# It is not recommended use npmregistry. Please investigate more.
+# Take a look at https://wiki.debian.org/debian/watch/
+opts="searchmode=plain,component=types-temp,ctype=nodejs,pgpmode=none,filenamemangle=s/^.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-types-temp-$1/" \
+ https://registry.npmjs.org/@types/temp https://registry.npmjs.org/@types/temp/-/temp-([\d\.]+)@ARCHIVE_EXT@ group

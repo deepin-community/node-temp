@@ -1,3 +1,21 @@
+node-temp (0.9.4+~0.9.1-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on node-rimraf.
+    + node-temp: Drop versioned constraint on node-rimraf in Depends.
+
+  [ Yadd ]
+  * Update standards version to 4.6.0, no changes needed.
+  * Fix GitHub regex
+  * Fix filenamemangle
+  * Embed typescript definitions and repack
+  * New upstream version 0.9.4+~0.9.1
+
+ -- Yadd <yadd@debian.org>  Tue, 30 Nov 2021 10:01:33 +0100
+
 node-temp (0.9.4-1) unstable; urgency=medium
 
   * Team upload
