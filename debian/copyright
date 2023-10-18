@@ -2,16 +2,21 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: temp
 Upstream-Contact: https://github.com/bruce/node-temp/issues
 Source: https://github.com/bruce/node-temp
+ https://registry.npmjs.org/@types/temp
 
 Files: *
 Copyright: 2010-2015, Bruce Williams <brwcodes@gmail.com>
 License: Expat
 
 Files: debian/*
-Copyright:
+Copyright: 
  2014, Tim Retout <diocles@debian.org>
  2016, Jérémy Lal <kapouer@melix.org>
  2018-2021, Paolo Greppi <paolo.greppi@libpf.com>
+License: Expat
+
+Files: types-*/*
+Copyright: Microsoft Corporation
 License: Expat
 
 License: Expat
