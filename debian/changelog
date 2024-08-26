@@ -1,3 +1,10 @@
+node-temp (0.9.4+~0.9.1-2) unstable; urgency=medium
+
+  * Team upload
+  * patch: fix missing declaration. Closes: #1071016
+
+ -- Jérémy Lal <kapouer@melix.org>  Mon, 13 May 2024 09:01:11 +0200
+
 node-temp (0.9.4+~0.9.1-1) unstable; urgency=medium
 
   * Team upload

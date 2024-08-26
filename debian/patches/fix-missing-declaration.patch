@@ -1,0 +1,15 @@
+Description: fix variable declaration
+ In nodejs 20 some symbols are missing in imported module without it
+Forwarded: no
+Author: Jérémy Lal <kapouer@melix.org>
+--- a/lib/temp.js
++++ b/lib/temp.js
+@@ -1,7 +1,7 @@
+ let fs   = require('fs');
+ let path = require('path');
+ let cnst = require('constants');
+-crypto = require('crypto');
++let crypto = require('crypto');
+ 
+ let os         = require('os');
+ let rimraf     = require('rimraf');
